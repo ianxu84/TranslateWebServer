@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- 模板頁 套用給所有頁面用的基底 -->
+        <title>線上翻譯</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+        <meta http-equiv="Pragma" content="no-cache">
+        <meta http-equiv="Expires" content="0">        
+
+        <link rel="icon" sizes="192x192" href="{{ url_for('static', filename="img/icon.png") }}">
+        <link rel="shortcut icon" href="{{ url_for('static', filename="img/shortcut.png") }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/base.css') }}">
+        <script src="{{ url_for('static', filename='js/jquery.js') }}"></script>
+        {% block head %}
+        {% endblock %}
+
+    </head>
+
+    <body>
+        <div id="container" class="container">
+            <div class="body_header">
+                <span class="header_left">
+                    <p class="title">寀奕國際</p>
+                </span>
+                <span class="header_right">
+                    <!-- <p class="menu"> <a href="/">線上翻譯</a> &emsp;&emsp;<a href="/pdf">文檔翻譯</a></p>-->
+                    {% block header %}{% endblock %}
+                </span>
+            </div>
+            <div class="body_body">
+                {% block body %}{% endblock %}
+            </div>
+            <div class="body_footer">
+                {% block footer %}{% endblock %}
+                <div class="copyright">© 2020  Taieasy International Co., Ltd. All rights reserved. 隱私權聲明 </span>
+            </div>
+        </div>
+    <body>
+    
+</html>

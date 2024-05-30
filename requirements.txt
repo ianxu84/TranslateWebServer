@@ -1,0 +1,8 @@
+pandas
+numpy
+PyMuPDF
+openai
+deepl
+python-dotenv
+quart
+pdfplumber

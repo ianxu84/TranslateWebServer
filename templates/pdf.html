@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% extends "base.html" %}
+        {% block head %}
+
+        <script src="{{ url_for('static', filename='js/pdf.js') }}"></script>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/pdf.css') }}">
+
+        {% endblock %}
+        
+    </head>
+
+    <body>
+        {% block header %}{% endblock %}
+        {% block body %}
+        <div class="loading_container">
+            <img src="{{ url_for('static', filename='img/loading.gif')}}" class="loading_animation">
+        </div>
+        
+        <div class="body_container" id="body_container">
+            <div class="buttons_menu" id="buttons_menu">
+                <input type="file" class="file_input_deepl file_input" id="file_input_deepl" accept=".pdf"/>
+                <input type="file" class="file_input_deepl_image file_input" id="file_input_deepl_image" accept=".pdf"/>
+                <!-- <button type="button" class="btn_upload_chatgpt buttons" id="btn_upload_chatgpt">ChatGPT翻譯</button> -->
+                <button type="button" class="btn_upload_deepl buttons" id="btn_upload_deepl">文字翻譯</button>
+                <button type="button" class="btn_upload_deepl_image buttons" id="btn_upload_deepl_image">上傳翻譯檔</button>
+                <select id="glossaries" name="glossaries"><option value="None">請選擇分組</option></select>
+                <input type="text" class="page_select" id="page_select" placeholder="圖檔翻譯範圍"/>
+                <button type="button" class="btn_upload_image_check" id="btn_upload_image_check">確認上傳</button>
+                <p class="select_message" id='select_message'>預設全部圖檔翻譯, 或以-輸入連續頁, 以逗點分隔輸入指定頁<br>如 3-5,8翻譯3至5頁與第八頁等</p>
+            </div>
+            <hr>
+            <div class="table_container" id="table_container">
+                <table class="pdf_list list_table" id="list_table_translated">
+                    <tbody class="pdf_list list_table" id="list_tbody_translated">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        {% endblock %}
+        {% block footer %}{% endblock %}
+    <body>
+    
+</html>

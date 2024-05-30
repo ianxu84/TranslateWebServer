@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% extends "base.html" %}
+        {% block head %}
+
+        <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+        
+        {% endblock %}
+        
+    </head>
+
+    <body>
+        {% block header %}{% endblock %}
+        {% block body %}
+
+        <form class="translation">
+            <textarea class="text" id="text1" name="text"></textarea>
+            <button class="submit" id="submit">翻譯</button>
+        </form>
+        
+        {% endblock %}
+        {% block footer %}{% endblock %}
+    <body>
+    
+</html>

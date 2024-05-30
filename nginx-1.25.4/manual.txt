@@ -1,0 +1,13 @@
+---***---
+CMD
+CD至當前目錄操作
+start nginx.exe  # 啟動nginx代理
+nginx -s stop    # 停止nginx
+
+---***---
+Web config
+
+/conf/proxy_translate_setting.conf # 翻譯Web設定 
+/conf/nginx.conf                   # nginx設定 可設定連接設備數等等
+
+---***---

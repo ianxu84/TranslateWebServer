@@ -1,0 +1,30 @@
+.text {
+    margin: 20px 20px 20px 20px;
+    border-width: 1px;
+    width: 350px;
+    max-width: 350px;
+    min-width: 350px;
+    height: 250px;
+    max-height: 250px;
+    min-height: 250px;
+    font-size: 16pt;
+    text-align: left;
+    vertical-align: top;
+}
+.submit {
+    vertical-align: bottom;
+    border: solid;
+    border-color: rgb(8, 62, 133);
+    font-size: 16pt;
+    width: 90px;
+    &:hover{
+        color:green;
+        border: 1px;
+        box-shadow: 0 0 1px 3px rgba(7, 172, 103, 0.8);
+    }
+}
+.translation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
